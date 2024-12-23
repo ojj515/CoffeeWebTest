@@ -22,11 +22,11 @@ body {
 /* 상단 헤더 */
 .header {
     background-color: rgb(39,43,46);
-    margin-bottom: 0; /* 헤더와 메인 섹션 사이의 여백 제거 */
+    margin-bottom: 0;
 }
 
 .icon {
-    color: white; /* 원하는 색상으로 변경 */
+    color: white;
 }
 
 .top-bar {
@@ -45,7 +45,7 @@ body {
 }
 
 .logo {
-    font-family: 'Cafe24Dangdanghae', sans-serif; 
+    font-family: 'Cafe24Dangdanghae', sans-serif;
     font-size: 28px;
     color: #d52b2b;
 }
@@ -53,11 +53,36 @@ body {
 .nav a {
     margin: 0 15px;
     text-decoration: none;
-    color: #fff; /* 글자 색 흰색 */
+    color: #fff;
 }
 
 .icons .icon {
     margin-left: 10px;
+}
+
+/* 헤더 모바일 반응형 */
+@media (max-width: 768px) {
+    .logo-nav {
+        flex-direction: column; /* 로고와 내비게이션을 세로로 배치 */
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 24px; /* 로고 크기 감소 */
+    }
+
+    .nav {
+        margin-top: 10px;
+    }
+
+    .nav a {
+        margin: 5px 0;
+    }
+
+    .top-bar {
+        font-size: 12px; /* 작은 화면에서 텍스트 크기 줄이기 */
+        padding: 3px 0;
+    }
 }
 
 /* 메인 섹션 */
@@ -66,9 +91,9 @@ body {
     text-align: center;
     background-color: #f8f8f8;
     height: 500px;
-    overflow: hidden; /* 이미지가 영역을 벗어나지 않게 함 */
-    border: none; /* 흰색 선 제거 */
-    margin-top: 0; /* 헤더와의 간격 없애기 */
+    overflow: hidden;
+    border: none;
+    margin-top: 0;
 }
 
 .hero-images {
@@ -98,7 +123,6 @@ body {
     z-index: 2;
 }
 
-/* 텍스트 스타일 */
 .hero-content {
     position: absolute;
     top: 50%;
@@ -127,92 +151,58 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* 세로 방향으로 정렬 */
+    flex-direction: column;
     margin-bottom: 60px;
     margin-top: 30px;
     padding: 0 15px;
-    gap: 30px; /* 이미지와 텍스트 간 간격 */
-    text-align: center; /* 텍스트 중앙 정렬 */
+    gap: 30px;
+    text-align: center;
 }
 
-/* h2가 설명 섹션에서 맨 위로 나오게끔 스타일 수정 */
 .description h2 {
     font-size: 2rem;
-    margin-bottom: 10px; /* h2 아래 여백 */
+    margin-bottom: 10px;
     color: #333;
 }
 
-/* 이미지 크기 조정 */
 .description img {
-    width: 35%; /* 이미지 크기 적당히 설정 */
+    width: 35%;
     height: auto;
     border-radius: 8px;
     object-fit: cover;
 }
 
-/* 텍스트 스타일 */
 .description .text {
     width: 50%;
     font-size: 1.2rem;
     line-height: 1.6;
 }
 
-/* 작은 화면에서의 스타일 */
+/* 모바일 반응형 */
 @media (max-width: 768px) {
-    body {
-        font-size: 14px; /* 모바일에서 기본 텍스트 크기 감소 */
-    }
-
-    /* 헤로 섹션 텍스트 크기 */
     .hero-content h2 {
-        font-size: 1.8rem; /* 모바일에서 글자 크기 줄이기 */
+        font-size: 2rem;
     }
 
     .hero-content p {
         font-size: 1.2rem;
     }
 
-    /* 설명 섹션에서 이미지 크기 조정 */
-    .description img {
-        width: 80%;  /* 이미지 크기 줄이기 */
-        height: auto;
-    }
-
-    /* 설명 텍스트의 너비를 조정하여 모바일에서도 잘 보이게 하기 */
-    .description .text {
-        width: 90%;
-        padding-top: 20px;
-        font-size: 1rem;
-    }
-
-    /* 메뉴 그리드 개선 */
-    .menu-grid {
-        grid-template-columns: 1fr;  /* 작은 화면에서 1열로 설정 */
-    }
-
-    .menu-item {
-        padding: 15px;  /* 메뉴 항목의 패딩을 줄여서 공간 활용 */
-    }
-
-    /* 푸터에서 링크 크기 조정 */
-    .footer .footer-guide a {
-        font-size: 0.9rem;  /* 링크 글자 크기 줄이기 */
-    }
-
-    .footer .footer-info,
-    .footer .footer-contact {
-        text-align: center;
-    }
-
-    .footer .footer-content {
+    .description {
         flex-direction: column;
         align-items: center;
-        padding: 0 15px;
+        text-align: center;
+        gap: 20px;
     }
 
-    .footer .footer-info p,
-    .footer .footer-contact p {
-        font-size: 0.9rem;
+    .description img {
+        width: 70%;
+        max-width: 100%;
+    }
+
+    .description .text {
+        width: 100%;
+        padding-top: 20px;
     }
 }
 
@@ -224,13 +214,12 @@ body {
 }
 
 .coffee-menu h2 {
-    font-size: 2.5rem;  /* 글자 크기 증가 */
+    font-size: 2.5rem;
     margin-bottom: 20px;
     color: #333;
     font-weight: bold;
 }
 
-/* 메뉴 그리드 */
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -266,14 +255,13 @@ body {
 
 /* 이달의 메뉴 섹션 */
 .monthly-menu h2 {
-    text-align: center;  /* 제목 중앙 정렬 */
+    text-align: center;
     font-size: 2.5rem;
     margin-bottom: 40px;
     color: #333;
     font-weight: bold;
 }
 
-/* 이달의 메뉴 항목 */
 .monthly-menu .menu-item {
     background-color: #fff;
     padding: 10px;
@@ -284,17 +272,15 @@ body {
     border: none;
 }
 
-/* 이미지 스타일 */
 .monthly-menu .menu-item img {
     width: 100%;
-    height: auto;  /* 높이를 자동으로 설정하여 이미지 비율을 유지 */
+    height: auto;
     border-radius: 8px;
-    object-fit: cover;  /* 이미지를 부모 요소를 꽉 채우도록 설정 */
+    object-fit: cover;
     display: block;
     margin: 0 auto;
 }
 
-/* 텍스트 스타일 */
 .monthly-menu .menu-item h3 {
     margin-top: 15px;
     font-size: 1.8rem;
@@ -315,21 +301,25 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;  /* 수직 중앙 정렬 */
-    gap: 40px;  /* 지도와 텍스트 간의 간격을 넓힘 */
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
 }
 
 /* 길안내 텍스트 */
 .directions .description {
-    max-width: 800px;  /* 텍스트의 최대 너비 */
-    margin: 0 auto;  /* 수평 중앙 정렬 */
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
     font-size: 1.2rem;
     color: #333;
-    margin-top: 10px; /* 텍스트 위쪽 여백 추가 */
+    margin-top: 10px;
+    padding: 0 15px;
 }
 
+/* 길안내 제목 */
 .directions h2 {
-    font-size: 2.5rem;  /* 글자 크기 증가 */
+    font-size: 2.5rem;
     margin-bottom: 20px;
     color: #333;
     font-weight: bold;
@@ -337,32 +327,35 @@ body {
 
 /* 지도 */
 .directions .map {
-    max-width: 100%;  /* 지도 크기 반응형 */
-    width: 600px;  /* 지도 너비 설정 */
+    width: 100%;
+    max-width: 600px;
     height: 450px;
-    margin: 0 auto;  /* 수평 중앙 정렬 */
+    margin: 0 auto;
 }
 
-/* 호버 효과 */
-.menu-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* 반응형: 작은 화면에서는 1열로 */
+/* 길안내 모바일 반응형 */
 @media (max-width: 768px) {
-    .menu-grid {
-        grid-template-columns: 1fr;
+    .directions .description {
+        font-size: 1rem;
     }
 
-    .menu-item {
-        padding: 15px;
+    .directions h2 {
+        font-size: 2rem;
+    }
+
+    .directions .map {
+        width: 100%;
+        height: 300px;
+    }
+
+    .directions {
+        gap: 30px;
     }
 }
 
 /* 푸터 */
 .footer {
-    background-color: #2e2e2e;  /* 깊고 세련된 색상 */
+    background-color: #2e2e2e;
     color: #fff;
     text-align: center;
     padding: 40px 0;
@@ -374,7 +367,7 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 0 20px;
-    max-width: 1200px; /* 최대 너비 설정 */
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -410,7 +403,7 @@ body {
 
 .footer .footer-guide a:hover {
     text-decoration: underline;
-    color: #ffcc00;  /* 밝은 황금색으로 호버 효과 */
+    color: #ffcc00;
 }
 
 .footer .footer-info h3,
@@ -446,5 +439,3 @@ body {
         text-align: center;
     }
 }
-
-
