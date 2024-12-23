@@ -253,6 +253,21 @@ body {
     color: #666;
 }
 
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr; /* 메뉴 항목을 1열로 나열 */
+    }
+
+    .menu-item img {
+        height: 250px; /* 이미지 크기 조정 */
+    }
+
+    .coffee-menu h2 {
+        font-size: 2rem;
+    }
+}
+
 /* 이달의 메뉴 섹션 */
 .monthly-menu h2 {
     text-align: center;
@@ -440,3 +455,4 @@ body {
         text-align: center;
     }
 }
+
