@@ -331,8 +331,6 @@ body {
     margin-top: 10px;
     padding: 0 15px;
     word-wrap: break-word; /* 긴 단어가 영역을 벗어나지 않도록 처리 */
-    overflow-wrap: break-word; /* word-wrap의 최신 속성, 동일한 기능 */
-    white-space: normal; /* 텍스트가 영역을 벗어나지 않도록 줄바꿈 설정 */
 }
 
 /* 길안내 제목 */
@@ -358,9 +356,6 @@ body {
     .directions .description {
         font-size: 1rem;
         padding: 0 10px; /* 텍스트와 화면 사이에 여백 추가 */
-        word-wrap: break-word; /* 모바일에서도 긴 단어가 영역을 벗어나지 않도록 처리 */
-        overflow-wrap: break-word; /* 모바일에서도 텍스트가 잘리도록 처리 */
-        white-space: normal; /* 텍스트 줄바꿈이 가능하도록 설정 */
     }
 
     .directions h2 {
