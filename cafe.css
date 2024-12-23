@@ -330,6 +330,7 @@ body {
     color: #333;
     margin-top: 10px;
     padding: 0 15px;
+    word-wrap: break-word; /* 긴 단어가 영역을 벗어나지 않도록 처리 */
 }
 
 /* 길안내 제목 */
@@ -355,6 +356,7 @@ body {
     .directions .description {
         font-size: 1rem;
         padding: 0 10px; /* 텍스트와 화면 사이에 여백 추가 */
+        word-wrap: break-word; /* 모바일에서도 긴 단어가 영역을 벗어나지 않도록 처리 */
     }
 
     .directions h2 {
