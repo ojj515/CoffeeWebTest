@@ -319,6 +319,7 @@ body {
     justify-content: center;
     gap: 30px;
     width: 100%;
+    box-sizing: border-box; /* 부모 컨테이너의 크기 계산에 패딩 포함 */
 }
 
 /* 길안내 텍스트 */
@@ -330,6 +331,7 @@ body {
     color: #333;
     margin-top: 10px;
     padding: 0 15px;
+    text-align: left; /* 모바일에서도 글자 정렬을 왼쪽으로 */
 }
 
 /* 길안내 제목 */
@@ -343,37 +345,37 @@ body {
 /* 지도 */
 .directions .map {
     width: 100%;
-    max-width: 100%; /* 부모 컨테이너에 맞게 너비 조정 */
+    max-width: 100%; /* 부모 컨테이너의 너비를 넘지 않도록 설정 */
     height: 450px;
     margin: 0 auto;
-    min-height: 250px; /* 최소 높이를 설정하여 모바일에서도 너무 축소되지 않도록 설정 */
-    overflow: hidden; /* 지도가 넘치는 부분을 숨깁니다 */
+    min-height: 250px; /* 최소 높이를 설정하여 너무 축소되지 않도록 */
+    overflow: hidden; /* 지도가 부모 영역을 넘지 않도록 숨기기 */
 }
 
 /* 길안내 모바일 반응형 */
 @media (max-width: 768px) {
     .directions .description {
         font-size: 1rem;
-        padding: 0 10px; /* 텍스트와 화면 사이에 여백 추가 */
+        padding: 0 10px; /* 모바일에서 여백을 좀 더 좁혀줌 */
+        text-align: center; /* 모바일에서는 텍스트 가운데 정렬 */
     }
 
     .directions h2 {
         font-size: 2rem;
+        margin-bottom: 15px;
     }
 
     .directions .map {
         width: 100%;
         height: 250px; /* 모바일에서 지도 크기 조정 */
-        min-height: 250px; /* 모바일에서도 지도 영역을 최소 250px로 유지 */
-        max-width: 100%; /* 모바일에서 지도가 화면을 벗어나지 않도록 제한 */
+        min-height: 250px; /* 최소 높이 설정 */
+        max-width: 100%; /* 지도 크기를 부모 영역에 맞춤 */
     }
 
     .directions {
-        gap: 100px; /* 텍스트와 지도 간격을 좀 더 좁힘 */
+        gap: 20px; /* 모바일에서 텍스트와 지도 간격 좁히기 */
     }
 }
-
-
 /* 푸터 */
 .footer {
     background-color: #2e2e2e;
