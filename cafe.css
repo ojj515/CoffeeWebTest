@@ -5,6 +5,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 /* 공통 스타일 초기화 */
 * {
     margin: 0;
@@ -23,6 +24,7 @@ body {
     background-color: rgb(39,43,46);
     margin-bottom: 0; /* 헤더와 메인 섹션 사이의 여백 제거 */
 }
+
 .icon {
     color: white; /* 원하는 색상으로 변경 */
 }
@@ -119,6 +121,7 @@ body {
     font-size: 1.4rem;
     line-height: 1.6;
 }
+
 /* 설명 섹션 */
 .description {
     display: flex;
@@ -154,32 +157,62 @@ body {
     line-height: 1.6;
 }
 
-
 /* 작은 화면에서의 스타일 */
 @media (max-width: 768px) {
+    body {
+        font-size: 14px; /* 모바일에서 기본 텍스트 크기 감소 */
+    }
+
+    /* 헤로 섹션 텍스트 크기 */
     .hero-content h2 {
-        font-size: 2rem;
+        font-size: 1.8rem; /* 모바일에서 글자 크기 줄이기 */
     }
 
     .hero-content p {
         font-size: 1.2rem;
     }
 
-    .description {
+    /* 설명 섹션에서 이미지 크기 조정 */
+    .description img {
+        width: 80%;  /* 이미지 크기 줄이기 */
+        height: auto;
+    }
+
+    /* 설명 텍스트의 너비를 조정하여 모바일에서도 잘 보이게 하기 */
+    .description .text {
+        width: 90%;
+        padding-top: 20px;
+        font-size: 1rem;
+    }
+
+    /* 메뉴 그리드 개선 */
+    .menu-grid {
+        grid-template-columns: 1fr;  /* 작은 화면에서 1열로 설정 */
+    }
+
+    .menu-item {
+        padding: 15px;  /* 메뉴 항목의 패딩을 줄여서 공간 활용 */
+    }
+
+    /* 푸터에서 링크 크기 조정 */
+    .footer .footer-guide a {
+        font-size: 0.9rem;  /* 링크 글자 크기 줄이기 */
+    }
+
+    .footer .footer-info,
+    .footer .footer-contact {
+        text-align: center;
+    }
+
+    .footer .footer-content {
         flex-direction: column;
         align-items: center;
-        text-align: center;
-        gap: 20px;
+        padding: 0 15px;
     }
 
-    .description img {
-        width: 70%; /* 작은 화면에서 이미지 크기 더 작게 */
-        max-width: 100%;
-    }
-
-    .description .text {
-        width: 100%;
-        padding-top: 20px;
+    .footer .footer-info p,
+    .footer .footer-contact p {
+        font-size: 0.9rem;
     }
 }
 
@@ -230,6 +263,7 @@ body {
     font-size: 1rem;
     color: #666;
 }
+
 /* 이달의 메뉴 섹션 */
 .monthly-menu h2 {
     text-align: center;  /* 제목 중앙 정렬 */
@@ -238,6 +272,7 @@ body {
     color: #333;
     font-weight: bold;
 }
+
 /* 이달의 메뉴 항목 */
 .monthly-menu .menu-item {
     background-color: #fff;
@@ -271,6 +306,7 @@ body {
     font-size: 1.2rem;
     color: #666;
 }
+
 /* 길안내 섹션 */
 .directions {
     padding: 50px 20px;
@@ -291,12 +327,14 @@ body {
     color: #333;
     margin-top: 10px; /* 텍스트 위쪽 여백 추가 */
 }
+
 .directions h2 {
     font-size: 2.5rem;  /* 글자 크기 증가 */
     margin-bottom: 20px;
     color: #333;
     font-weight: bold;
 }
+
 /* 지도 */
 .directions .map {
     max-width: 100%;  /* 지도 크기 반응형 */
@@ -408,4 +446,5 @@ body {
         text-align: center;
     }
 }
+
 
