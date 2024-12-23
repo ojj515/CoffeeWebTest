@@ -317,20 +317,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 40px;
-    width: 100%;
-}
-
-/* 길안내 섹션 */
-.directions {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #f8f8f8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
+    gap: 30px;
     width: 100%;
 }
 
@@ -356,9 +343,11 @@ body {
 /* 지도 */
 .directions .map {
     width: 100%;
-    max-width: 800px; /* 지도 크기를 800px로 제한 */
+    max-width: 100%; /* 부모 컨테이너에 맞게 너비 조정 */
     height: 450px;
     margin: 0 auto;
+    min-height: 250px; /* 최소 높이를 설정하여 모바일에서도 너무 축소되지 않도록 설정 */
+    overflow: hidden; /* 지도가 넘치는 부분을 숨깁니다 */
 }
 
 /* 길안내 모바일 반응형 */
@@ -374,13 +363,16 @@ body {
 
     .directions .map {
         width: 100%;
-        height: 300px; /* 모바일에서 지도 크기 줄이기 */
+        height: 250px; /* 모바일에서 지도 크기 조정 */
+        min-height: 250px; /* 모바일에서도 지도 영역을 최소 250px로 유지 */
+        max-width: 100%; /* 모바일에서 지도가 화면을 벗어나지 않도록 제한 */
     }
 
     .directions {
-        gap: 30px;
+        gap: 100px; /* 텍스트와 지도 간격을 좀 더 좁힘 */
     }
 }
+
 
 /* 푸터 */
 .footer {
