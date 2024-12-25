@@ -349,6 +349,8 @@ body {
     margin: 0 auto;
     min-height: 250px; /* 최소 높이를 설정하여 모바일에서도 너무 축소되지 않도록 설정 */
     overflow: hidden; /* 지도가 넘치는 부분을 숨깁니다 */
+    border-radius: 8px; /* 테두리 둥글게 설정 */
+    border: 1px solid #ddd; /* 테두리 추가 */
 }
 
 /* 길안내 모바일 반응형 */
@@ -370,9 +372,10 @@ body {
     }
 
     .directions {
-        gap: 100px; /* 텍스트와 지도 간격을 좀 더 좁힘 */
+        gap: 20px; /* 텍스트와 지도 간격을 조정 */
     }
 }
+
 /* 푸터 */
 .footer {
     background-color: #2e2e2e;
@@ -444,7 +447,6 @@ body {
 }
 
 /* 반응형 디자인 */
-/* 수정 */
 @media (max-width: 768px) {
     .footer .footer-content {
         flex-direction: column;
@@ -460,4 +462,3 @@ body {
         text-align: center;
     }
 }
-
