@@ -321,6 +321,19 @@ body {
     width: 100%;
 }
 
+/* 길안내 섹션 */
+.directions {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
 /* 길안내 텍스트 */
 .directions .description {
     max-width: 800px;
@@ -331,6 +344,7 @@ body {
     margin-top: 10px;
     padding: 0 15px;
     word-wrap: break-word; /* 긴 단어가 영역을 벗어나지 않도록 처리 */
+    text-align: center; /* 텍스트 가운데 정렬 */
 }
 
 /* 길안내 제목 */
@@ -358,6 +372,7 @@ body {
     .directions .description {
         font-size: 1rem;
         padding: 0 10px; /* 텍스트와 화면 사이에 여백 추가 */
+        text-align: center; /* 텍스트 가운데 정렬 */
     }
 
     .directions h2 {
@@ -375,6 +390,7 @@ body {
         gap: 20px; /* 텍스트와 지도 간격을 조정 */
     }
 }
+
 
 /* 푸터 */
 .footer {
