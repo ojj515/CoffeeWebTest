@@ -321,6 +321,15 @@ body {
     width: 100%;
 }
 
+/* body 및 html 기본 설정 */
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* 모든 요소의 box-sizing을 border-box로 설정 */
+    overflow-x: hidden; /* 가로 스크롤을 방지 */
+}
+
 /* 길안내 섹션 */
 .directions {
     padding: 50px 20px;
