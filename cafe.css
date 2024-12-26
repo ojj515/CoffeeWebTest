@@ -21,6 +21,9 @@ body {
     background-color: rgb(39,43,46);
     margin-bottom: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 .icon {
     color: white;
